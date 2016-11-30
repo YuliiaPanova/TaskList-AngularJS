@@ -1,0 +1,28 @@
+<md-sidenav  md-component-id="editProject" class="md-sidenav-right" md-is-locked-open>
+    <md-subheader class="subheader">
+        Edit project
+        <md-button class="md-icon-button close-button" ng-click="main.toggleEditProjectSidenav()" aria-label="Edit project">
+            <md-icon class="icons8-delete-2"></md-icon>
+            ESC
+        </md-button>
+    </md-subheader>
+
+    <div ng-controller="editProjectCtrl as projectEdit">
+        <form name="taskForm" ng-submit="projectEdit.updateProjectConfirm()">
+            <md-content >
+
+                <md-input-container >
+                    <label>task Name</label>
+                    <input required="" name="projectForm.name" ng-model="projectEdit.projectTitle">
+                    <div ng-messages="projectForm.projectName.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+
+                <md-button type="submit" class="md-fab new-task-button" aria-label="New task">
+                    <md-icon class="icons8-checkmark"></md-icon>
+                </md-button>
+            </md-content>
+        </form>
+    </div>
+</md-sidenav>

@@ -1,0 +1,115 @@
+.full-size(){
+    text-indent: -9999px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.clearfix(){
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing:    @type;
+    box-sizing:         @type;
+}
+
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
+}
+
+.flex-display(@display: flex) {
+    display: ~"-webkit-@{display}";
+    display: ~"-moz-@{display}";
+    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+    display: ~"-ms-@{display}"; // IE11
+    display: @display;
+}
+
+.flex-wrap(@wrap: wrap) {
+    -webkit-flex-wrap: @wrap;
+    -moz-flex-wrap: @wrap;
+    -ms-flex-wrap: @wrap;
+    flex-wrap: @wrap;
+}
+
+.justify-content(@justify: flex-start) {
+    -webkit-justify-content: @justify;
+    -moz-justify-content: @justify;
+    -ms-justify-content: @justify;
+    justify-content: @justify;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    transition: @transition;
+}
+
+.shadow(@shadow){
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+
+.placeholder(@color){
+    &:-moz-placeholder{    color: @color;}
+    &::-webkit-input-placeholder{    color: @color;}
+    &:-ms-input-placeholder{    color: @color;}
+    &:-ms-input-placeholder{    color: @color;}
+}
+
+.rotate(@angle){
+    -webkit-transform: rotate(@angle);
+    -moz-transform: rotate(@angle);
+    -ms-transform: rotate(@angle);
+    transform: rotate(@angle);
+}
+
+.ellipsis(){
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.border-image{
+    border-style: solid;
+    border-width: 11px;
+    -moz-border-image: url('../images/border-editable.png') 11 repeat;
+    -webkit-border-image: url('../images/border-editable.png') 11 repeat;
+    border-image: url('../images/border-editable.png') 11 fill repeat;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.gradient-horizontal (@startColor: #27282c, @endColor: #494b4d) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(left, @startColor, @endColor);
+    background: -moz-linear-gradient(left, @startColor, @endColor);
+    background: -ms-linear-gradient(left, @startColor, @endColor);
+    background: -o-linear-gradient(left, @startColor, @endColor);
+    background: linear-gradient(to right,  @startColor, @endColor); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+}
+
+

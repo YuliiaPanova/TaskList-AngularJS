@@ -1,0 +1,47 @@
+<div class="">
+    <md-list class="task-list">
+        <div ng-repeat="item in taskList.tasks">
+            <div class="date">
+                {{item.created_at | customDateFilter:'day'}}
+                <span ng-show="item.created_at | customDateFilter:'date'">({{item.created_at | customDateFilter:'date'}})</span>
+            </div>
+            <md-list-item md-whiteframe="3" class="md-1-line list-item" >
+
+                <md-list class="task-list-inner">
+                    <md-list-item class="md-1-line task-item" ng-repeat="itemInner in item.innerTasks">
+
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center" >
+                            <md-checkbox  ng-init='taskId = itemInner.Task.id' ng-click="taskList.deleteTask($event, taskId)">
+                                <md-tooltip md-direction="left">Mark as done and delete task</md-tooltip>
+                                <!--<md-icon class="icons8-checked"></md-icon>-->
+                            </md-checkbox>
+                            <div class="button-holder">
+                                <md-button ng-click="openTask($event, taskList, itemInner)" class="_no-style" role="button">
+                                    {{itemInner.Task.title}}
+                                </md-button>
+                                <!--<a href="/#!/project/{{taskList.projectId}}/task/{{itemInner.Task.id}}" ng-click="foo()">link</a>-->
+                            </div>
+
+
+                        </md-item-content>
+                    </md-list-item>
+                </md-list>
+
+            </md-list-item>
+        </div>
+    </md-list>
+</div>
+<md-button ng-click='main.toggleCreateTaskSidenav()' class="md-fab new-task-button fixed" aria-label="New task">
+    <md-tooltip md-direction="left">Add new task</md-tooltip>
+    <md-icon class="icons8-plus"></md-icon>
+</md-button>
+
+<create-task></create-task>
+<!--sideNav for creating new task-->
+<!--it will be nested controller (taskListCtrl <-- createTaskCtrl)  -->
+
+<edit-task></edit-task>
+<!--<edit-task></edit-task>-->
+
+<edit-project></edit-project>
+<!--sideNav for project update -->

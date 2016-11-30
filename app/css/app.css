@@ -1,0 +1,429 @@
+/* app css stylesheet */
+.border-image {
+  border-style: solid;
+  border-width: 11px;
+  -moz-border-image: url('../images/border-editable.png') 11 repeat;
+  -webkit-border-image: url('../images/border-editable.png') 11 repeat;
+  border-image: url('../images/border-editable.png') 11 fill repeat;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 15px;
+  color: #fff;
+  background-color: #f7f7f7;
+  min-width: 320px;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+.menu:before {
+  content: "[";
+}
+.menu:after {
+  content: "]";
+}
+.menu > li {
+  display: inline;
+}
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+.wrapper {
+  position: absolute;
+  top: 153px;
+  bottom: 40px;
+  overflow-y: scroll;
+  right: 0;
+  left: 0;
+  padding: 2px 15px;
+}
+.wrapper::-webkit-scrollbar,
+.view::-webkit-scrollbar {
+  width: 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wrapper::-webkit-scrollbar-track,
+.view::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  width: 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wrapper::-webkit-scrollbar-thumb,
+.view::-webkit-scrollbar-thumb {
+  background-color: #b3bbcb;
+  outline: 1px solid slategrey;
+  width: 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.view {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  margin-top: -65px;
+  padding-top: 65px;
+}
+.project-title {
+  font-size: 13px;
+  color: #b3bbcb;
+}
+.user-name {
+  font-size: 15px;
+  display: table-row;
+  height: 60px;
+  word-break: break-word;
+}
+.user-name .user-name-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+.user-avatar-frame {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 3px;
+  margin-right: 17px;
+}
+.user-avatar-frame .user-avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.user-avatar-frame .user-avatar img {
+  vertical-align: top;
+  width: 100%;
+}
+.side-nav {
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+.no-padding {
+  padding: 0;
+  min-height: inherit;
+}
+.project-list {
+  padding: 0;
+  margin: -2px 0 0;
+}
+.project-list md-list-item {
+  padding: 0 15px;
+  margin-bottom: 2px;
+  position: relative;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.project-list md-list-item:hover,
+.project-list md-list-item:focus,
+.project-list md-list-item:active,
+.project-list md-list-item.active {
+  background-color: #6b6b99;
+}
+.project-list md-list-item:hover a,
+.project-list md-list-item:focus a,
+.project-list md-list-item:active a,
+.project-list md-list-item.active a {
+  color: #fff;
+}
+.project-list md-list-item a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-decoration: none;
+}
+.header-toolbar {
+  min-height: 49px;
+  background-color: #f7f7f7;
+  z-index: 3;
+}
+form {
+  padding-left: 30px;
+}
+form md-content {
+  position: static;
+}
+form.edit-task-form {
+  padding: 0;
+}
+md-sidenav {
+  color: #fff;
+}
+md-sidenav .subheader {
+  font-size: 19px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+}
+md-sidenav.project-nav .subheader {
+  text-align: left;
+}
+.md-toast-content {
+  background-color: #6b6b99;
+  color: #fff;
+}
+md-input-container label:not(.md-container-ignore).md-required:after {
+  content: '';
+}
+.md-open-menu-container.md-active {
+  background-color: #fff;
+  color: #b3bbcb;
+}
+.md-open-menu-container.md-active md-icon.icon {
+  color: #b3b6bd;
+  font-size: 28px;
+  margin-top: -15px;
+}
+.edit-task-form md-input-container {
+  padding: 0;
+  margin: 0;
+}
+.edit-task-form input {
+  border: none;
+  text-align: center;
+  height: 27px;
+  margin: 18px 0 0;
+}
+.edit-task-form textarea {
+  border: none;
+  font-size: 12px;
+  color: #dbdbdb;
+  height: 80px;
+  padding: 0 12%;
+  line-height: 21px;
+}
+.edit-task-form .md-button {
+  min-width: inherit;
+  color: #51555e;
+  width: 40px;
+  height: 44px;
+}
+.edit-task-form .md-button:hover {
+  color: #fff;
+}
+.button-holder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 70px;
+}
+.button-holder .md-button {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  line-height: 50px;
+  text-transform: none;
+}
+.md-button.md-icon-button {
+  margin: 0;
+}
+.md-button.md-icon-button.add-button {
+  font-size: 19px;
+  color: #fff;
+  padding: 0;
+  margin: -14px -18px 0 0;
+}
+.md-button.md-icon-button.add-project {
+  float: right;
+  margin-top: 5px;
+  margin-right: -8px;
+}
+.md-button.md-icon-button.close-button {
+  font-size: 8px;
+  line-height: 8px;
+  color: #fff;
+  float: left;
+}
+.md-button.md-icon-button.close-button md-icon {
+  font-size: 20px;
+}
+.md-button.md-fab.new-task-button {
+  background-color: #6b6b99;
+  font-size: 27px;
+  line-height: 27px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.md-button.fixed {
+  position: fixed;
+}
+md-tooltip {
+  background-color: #292c33;
+  color: #b3bbcb;
+}
+.subheader {
+  font-size: 11px;
+  margin-top: 10px;
+  font-weight: normal;
+  color: #b3bbcb;
+}
+.subheader .md-subheader-inner {
+  padding: 0;
+}
+.loader-holder {
+  z-index: 9;
+}
+.loader-holder.loader {
+  z-index: 12;
+}
+.no-match-holder {
+  display: table;
+  width: 100%;
+  height: 100%;
+  color: #b3bbcb;
+  font-size: 24px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.no-match-holder .no-match {
+  display: table-cell;
+  vertical-align: middle;
+}
+.no-match-holder md-icon {
+  font-size: 150px;
+  width: 150px;
+  height: 150px;
+}
+md-sidenav {
+  width: 531px;
+  padding: 20px;
+  background-color: #292c33;
+}
+.project-nav {
+  padding: 10px 31px;
+}
+.content {
+  color: #b3bbcb;
+}
+.logout {
+  position: absolute;
+  bottom: 4px;
+  left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.md-toolbar-tools .md-button {
+  font-size: 26px;
+}
+md-divider {
+  background: #bdbdbd;
+}
+md-list-item.list-item {
+  margin-bottom: 10px ;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #fff;
+}
+.task-list-inner {
+  width: 100%;
+}
+.task-list-inner md-list-item:not(:last-of-type) {
+  border-bottom: 1px solid #eaeaea;
+}
+.date {
+  color: #b3bbcb;
+}
+md-input-container {
+  width: 96%;
+}
+md-checkbox {
+  width: 27px;
+  margin-right: 61px;
+}
+md-checkbox:last-of-type {
+  margin-right: 61px;
+}
+md-checkbox::after {
+  content: '';
+  width: 1px;
+  background-color: #eaeaea;
+  position: absolute;
+  right: -28px;
+  top: 1px;
+  bottom: -15px;
+}
+md-checkbox .md-icon {
+  border: 3px solid #bdbdbd;
+  width: 20px;
+  height: 20px;
+  margin: 9px 35px 22px 4px;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+md-checkbox.md-checked .md-icon:after {
+  border: none;
+  transform: initial;
+  content: "\f102";
+  font-family: "Test--front-end";
+  color: #bdbdbd;
+  font-size: 23px;
+  left: -4px;
+  top: -8px;
+  background-color: transparent;
+}
+.task-list {
+  padding: 10px 20%;
+  font-size: 15px;
+  color: #000;
+}
+.task-list .task-item:hover {
+  background-color: #f9f9f9;
+}
+.task-list a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 85px;
+  right: 0;
+  text-decoration: none;
+}

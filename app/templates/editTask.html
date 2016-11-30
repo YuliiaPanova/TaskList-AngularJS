@@ -1,0 +1,38 @@
+<md-sidenav  md-component-id="editTask" class="md-sidenav-right" md-is-locked-open="">
+    <div ng-controller="editTaskCtrl as editTask">
+
+        <form name="taskEditForm" class="edit-task-form" ng-submit="editTask.editTaskConfirm()">
+            <div layout="row">
+                <md-subheader class="subheader">
+                    <md-button class="md-icon-button close-button" ng-click="main.closeEditTaskSidenav()" aria-label="add task">
+                        <md-icon class="icons8-delete-2"></md-icon>
+                        ESC
+                    </md-button>
+                </md-subheader>
+
+                <md-input-container md-no-float class="md-block">
+                    <input required="" type="text" placeholder="Task name" name="taskForm.name" ng-model="editTask.currentTask.title">
+                    <div ng-messages="taskEditForm.taskName.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+
+                <md-button type="submit" >
+                    <md-icon md-menu-origin class="icons8-edit icon" md-menu-align-target></md-icon>
+                </md-button>
+
+                <md-button ng-click="editTask.deleteTaskConfirm()">
+                    <md-icon md-menu-origin class="icons8-delete icon" md-menu-align-target></md-icon>
+                </md-button>
+
+            </div>
+
+            <div layout="row">
+                <md-input-container md-no-float class="md-block">
+                    <textarea placeholder="Task description" ng-model="editTask.currentTask.description"></textarea>
+                </md-input-container>
+            </div>
+        </form>
+    </div>
+</md-sidenav>
+

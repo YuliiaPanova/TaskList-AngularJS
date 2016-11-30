@@ -1,0 +1,7 @@
+.border-image {
+  border-style: solid;
+  border-width: 11px;
+  -moz-border-image: url('../images/border-editable.png') 11 repeat;
+  -webkit-border-image: url('../images/border-editable.png') 11 repeat;
+  border-image: url('../images/border-editable.png') 11 fill repeat;
+}

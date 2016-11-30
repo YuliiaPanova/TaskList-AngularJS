@@ -1,0 +1,37 @@
+<md-sidenav  md-component-id="createTask" class="md-sidenav-right" md-is-locked-open>
+
+    <div ng-controller="createTaskCtrl as task">
+
+        <md-subheader class="subheader">
+            Create new task
+            <md-button class="md-icon-button close-button" ng-click="main.toggleCreateTaskSidenav()" aria-label="add task">
+                <md-icon class="icons8-delete-2"></md-icon>
+                ESC
+            </md-button>
+        </md-subheader>
+
+        <form name="taskForm" ng-submit="task.createTaskConfirm()">
+            <md-content >
+
+                <md-input-container >
+                    <label>Task name</label>
+                    <input required="" name="taskForm.name" ng-model="task.taskName">
+                    <div ng-messages="taskForm.taskName.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container >
+                    <label>Description</label>
+                    <textarea ng-model="task.taskDescription" name="taskForm.description"></textarea>
+                </md-input-container>
+
+
+                <md-button type="submit" class="md-fab new-task-button " aria-label="New task">
+                    <md-tooltip md-direction="left">Create task</md-tooltip>
+                    <md-icon class="icons8-checkmark"></md-icon>
+                </md-button>
+            </md-content>
+        </form>
+    </div>
+</md-sidenav>
