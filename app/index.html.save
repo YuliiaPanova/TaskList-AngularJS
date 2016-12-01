@@ -6,13 +6,13 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="/bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="/bower_components/html5-boilerplate/dist/css/main.css">
     <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="js/angular-material.min.css">
+  <link rel="stylesheet" href="/js/angular-material.min.css">
   <link rel="stylesheet" href="css/loader.css">
   <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <link rel="stylesheet" href="css/font.css">
 
 </head>
@@ -145,7 +145,7 @@
 <script src="js/angular-animate.min.js"></script>
 <script src="js/angular-aria.min.js"></script>
 <script src="js/angular-messages.min.js"></script>
-<!-- Angular Material Library -->
-<script src="js/angular-material.min.js"></script>
+<!-- Angular aterial Library -->
+<script src="/js/angular-material.min.js"></script>
 </body>
 </html>
