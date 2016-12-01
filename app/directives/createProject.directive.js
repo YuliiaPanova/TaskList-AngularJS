@@ -6,7 +6,7 @@
                 restrict: 'AE',
                 transclude: true,
                 replace: true,
-                templateUrl: '../templates/createProject.html',
+                templateUrl: 'templates/createProject.html',
             }
         });
 })();
