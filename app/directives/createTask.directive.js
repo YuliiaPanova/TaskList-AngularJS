@@ -6,7 +6,7 @@
                 restrict: 'AE',
                 transclude: true,
                 replace: true,
-                templateUrl: '../templates/createTask.html'
+                templateUrl: 'templates/createTask.html'
             }
         });
 })();
