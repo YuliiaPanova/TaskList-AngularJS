@@ -12,15 +12,15 @@
 
         $routeProvider
             .when("/",{
-                templateUrl:"templates/noMatchProject.html"
+                templateUrl:"app/templates/noMatchProject.html"
             })
             .when("/project/:projectId", {
-                templateUrl:"templates/taskList",
+                templateUrl:"app/templates/taskList",
                 controller: "taskListCtrl",
                 controllerAs:"taskList"
             })
             .when("/project/:projectId/task/:taskId", {
-                templateUrl:"templates/taskList",
+                templateUrl:"app/templates/taskList",
                 controller: "taskListCtrl",
                 controllerAs:"taskList"
             })

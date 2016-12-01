@@ -6,7 +6,7 @@
                 restrict: 'AE',
                 transclude: true,
                 replace: true,
-                templateUrl: 'templates/loader.html'
+                templateUrl: 'app/templates/loader.html'
             }
         });
 })();
